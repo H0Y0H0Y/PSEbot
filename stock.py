@@ -18,6 +18,8 @@ class Stock:
     def get_stock_details(self):
         name = self.stock_name
         last_price = self._get_text_by_id('lblStockLatestLastPrice')
+        change_amt = self._get_text_by_id('lblStockLatestChange')
+        change_percent = self._get_text_by_id('lblStockLatestChangePerc')
         open_price = self._get_text_by_id('lblStockLatestOpen')
         low_price = self._get_text_by_id('lblStockLatestLow')
         high_price = self._get_text_by_id('lblStockLatestHigh')
@@ -25,6 +27,8 @@ class Stock:
 
         details = f"{name}\n" \
                   f"Price: {last_price}\n" \
+                  f"Change Amount: {change_amt}\n" \
+                  f"Percent Change: {change_percent}\n" \
                   f"Open Price: {open_price}\n" \
                   f"Low Price: {low_price}\n" \
                   f"High Price: {high_price}\n" \
